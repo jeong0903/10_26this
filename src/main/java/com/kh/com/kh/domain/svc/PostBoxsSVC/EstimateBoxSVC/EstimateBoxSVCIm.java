@@ -2,7 +2,6 @@ package com.kh.com.kh.domain.svc.PostBoxsSVC.EstimateBoxSVC;
 
 import com.kh.com.kh.domain.dao.PostBoxsDAO.EstimateBoxDAO.EstimateBoxDAO;
 import com.kh.com.kh.web.form.estimateForm.EstimateAllForm;
-import com.kh.com.kh.web.form.requestForm.RequestAllForm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -24,5 +23,10 @@ public class EstimateBoxSVCIm implements EstimateBoxSVC{
   @Override
   public List<EstimateAllForm> findAllGetEs(Long member_id) {
     return estimateBoxDAO.findAllGetEs(member_id);
+  }
+
+  @Override
+  public Long estiDel(Long estimate_id) {
+    return estimateBoxDAO.estiDel(estimate_id);
   }
 }

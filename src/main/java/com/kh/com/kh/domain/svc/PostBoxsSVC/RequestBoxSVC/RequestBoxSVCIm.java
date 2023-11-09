@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @Service
@@ -17,5 +16,10 @@ public class RequestBoxSVCIm implements RequestBoxSVC{
   @Override
   public List<RequestAllForm> findAllRq(Long member_id) {
     return requestBoxDAO.findAllRq(member_id);
+  }
+
+  @Override
+  public Long delRQ(Long requestBoard_id) {
+    return requestBoxDAO.delRQ(requestBoard_id);
   }
 }

@@ -11,7 +11,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -24,9 +23,9 @@ public class RequestBoardDAOImpl implements RequestBoardDAO{
   @Override
   public List<WorkGiveAll> findRQBoardAll() {
     String sql =
-        ("select board_id,member_id,category,area,hope_date,hope_text from requestBoard ");
+        ("select board_id,member_id,category,area,hope_date,hope_text from requestBoard order by cdate ");
     String sql2 =
-        ("select r1.member_id, m1.nickname from requestBoard r1, member m1 where r1.member_id = m1.member_id ");
+        ("select r1.member_id,nickname from requestBoard r1, member m1 where r1.member_id = m1.member_id ");
 
     List<WorkGiveAll> query = template.query(sql, BeanPropertyRowMapper.newInstance(WorkGiveAll.class));
     List<WorkGiveNick> queryNick = template.query(sql2, BeanPropertyRowMapper.newInstance(WorkGiveNick.class));

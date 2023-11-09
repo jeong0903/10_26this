@@ -46,8 +46,8 @@
     margin: 100px 0 50px;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: 1px solid #00B0FA;
-    color: #0056b3;
+    border-bottom: 1px solid var(--color-bg1);
+    color: var(--color-bg2);
 }
 .esti_section2.esti_main .title i{
     margin: 7px;
@@ -128,7 +128,7 @@
 }
 
 /* 보낸 요청 박스 : 아이콘 */
-.estiBox_Icon{
+.estiBox_Icon {
     grid-area: estiBox_Icon;
     font-size: 2.5rem;
     display: flex;
@@ -136,9 +136,10 @@
     align-items: center;
     padding-right: 50px;
     cursor: pointer;
-    color: #888;
 }
-.estiBox i.fa-paper-plane{
+.estiBox i.fa-paper-plane,
+.estiBox i.fa-trash-can{
+    color: #888;
     margin-right: 30px;
 }
 
@@ -155,7 +156,7 @@
 .estiBox:hover #content5,
 .estiBox:hover #content7,
 .estiBox:hover #content9 {
-    color: #0056b3;
+    color: var(--color-bg2);
 }
 .estiBox:hover #content2,
 .estiBox:hover #content4,
@@ -166,12 +167,12 @@
 }
 .estiBox:hover i.fa-paper-plane,
 .estiBox:hover i.fa-trash-can {
-    color: #00B0FA;
+    color: var(--color-bg1);
 }
 /* 아이콘 요소 직접 hover 시 색상 변경 */
 .estiBox .fa-paper-plane:hover,
 .estiBox .fa-trash-can:hover {
-    color: #0056b3 !important;
+    color: var(--color-bg2) !important;
 }
 
 

@@ -2,8 +2,6 @@ package com.kh.com.kh.web.form.requestForm;
 
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
 public class RequestAllForm {
   private Long board_Id;
