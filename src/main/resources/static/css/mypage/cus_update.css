@@ -1,209 +1,204 @@
-body{
-        background-color: #f9fbfc;
-    }
-    .upcontainer{
-        display: grid;
-        grid-template-areas:"header header header"
-                            ". main .";
-        grid-template-columns: 1fr 824px 1fr;
-    }
-    .upheader{
-        box-shadow: 0 5px 8px -6px #222;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        height: 80px;
-        align-items: center;
-    }
-    .upheader,
-    .content_top{
-        background-color: white;
-    }
-    .upheader{
-        grid-area: header;
-    }
-    .upheader .main_title{
-        margin-right: 600px;
-    }
-    .upmain{
-        grid-area: main;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .upmain .main_title{
-        align-self: self-start;
-        margin-bottom: 30px;
-        font-size:1.5rem;
-    }
-    .content_top,
-    .content_bottom
-    {
-        margin-top: 40px;
-        border-radius: 16px;
-        border: 2px solid rgb(0, 176, 250);
-        width: 80%;
-        height: auto;
-        padding: 20px;
-    }
-    .content_top .first_top{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 2px solid #f2f2f2;
-    }
-    .content_top .top_title{
-        margin-bottom: 10px;
-        color: rgba(123,137,148,.8);
-    }
-    .content_top .pic_nickname {
-        display: flex;
-        padding: 10px;
-    }
-    .content_top .pic,
-    .content_top .pic img {
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        margin-right: 20px;
-    }
-    .content_top .pic_nickname .nick_id{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .content_top .pic_nickname .nick_id .nickname{
-        font-size: 1.4rem;
-    }
-    .content_top .pic_nickname .nick_id .id_value{
-        color: rgba(123,137,148,.8);
-    }
-    .content_top .phone{
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border-bottom: 2px solid #f2f2f2;
+/* 컬러 */
+:root {
+    --color-font1: #003;
+    /* 글자색 */
+    --color-font2: #bbb;
+    /* 서브 글자색 */
+    --color-font3: #f0f0f0;
+    /* 밝은 회색 */
 
-    }
-    .content_top .phone .phone_img img{
-        width: 20px;
-        margin-right: 10px;
-    }
-    /* 여기부터 밑에 내용들 */
-    .content_bottom{
-        border: 2px solid rgba(123,137,148,.8);
-    }
-    .content_bottom .bottom_title{
-        color: rgba(123,137,148,.8);
-    }
-    .content_bottom .bottom_first .pw_btn .button{
-        width: 130px;
-    }
-    .content_bottom .bottom_first .pw_btn{
-        display: flex;
-        justify-content: end;
-        padding: 15px;
-    }
-    .update_pic{
-        display:flex;
-        justify-content:space-between;
-    }
-    .content_bottom .bottom_first .update_pic,
-    .content_bottom .bottom_first .update_email,
-    .content_bottom .bottom_first .update_nickname,
-    .content_bottom .bottom_first .update_phone{
-        border-bottom: 2px solid #f2f2f2;
-        padding: 15px;
-    }
-    .content_bottom .bottom_first .update_pic{
-        display:flex;
-    }
-    .content_bottom .bottom_first .update_pic > *{
-        width: 30%;
-    }
-    .value{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .input{
-        display: flex;
-    }
-    input {
-        padding: 5px;
-        text-align: end;
-        width: 300px;
-        height: 32px;
-        font-size: 1.1rem;
-        border: 0;
-        border-radius: 15px;
-        outline: none;
-        padding-left: 10px;
-        background-color: rgb(233, 233, 233);
-    }
+    --color-bg1: #00B0FA;
+    /* 밝은 배경색 */
+    --color-bg2: #039;
+    /* 어두운 배경색 */
+}
+*{color: var(--color-font1);}
+.upcontainer {
+    display: grid;
+    grid-template-areas: 
+    "   header header header  "
+    "   .      main   .       ";
+    grid-template-columns: 1fr 824px 1fr;
+}
 
+.upheader {
+    grid-area: header;
+}
 
-    .content_finish{
-        margin-top: 40px;
-        margin-bottom: 40px;
-        width: 80%;
-        display: flex;
-        justify-content: end;
-        align-items: end;
-    }
-    .content_finish .cus_delete{
-        margin-left: 80px;
-        color: rgba(123,137,148,.8);
-    }
-    .nickbtn{
-        width: 100px;
-        height: 30px;
-    }
-    .nickbtn .bottom.password{
-        width: 150px;
-    }
-    .cus_delete{
-        cursor: pointer;
-    }
-    #frm2{
-        display: flex;
-        justify-content:end;
-        width:110px;
-    }
-    .nickname_form_title.pic{
-        margin-top:10px;
-        margin-left:14px;
-    }
-    .filebox{
-        display : flex;
-        width:600px;
-        justify-content:start;
-    }
-    .filebox .upload-name {
-                display: inline-block;
-                height: 40px;
-                padding: 0 10px;
-                vertical-align: middle;
-                border: 1px solid #dddddd;
-                width:280px;
-                color: #999999;
-            }
-    .filebox label {
-                display: inline-block;
-                padding: 10px 20px;
-                color: #fff;
-                vertical-align: middle;
-                background-color: #999999;
-                cursor: pointer;
-                height: 20px;
-                margin-left: 10px;
-            }
-    .filebox input[type="file"] {
-                position: absolute;
-                width: 0;
-                height: 0;
-                padding: 0;
-                overflow: hidden;
-                border: 0;
-            }
+.upheader.title {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+.upheader.title h1{
+    width: 800px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--color-bg2);
+    font-size: 40px;
+    border-bottom: 1px solid var(--color-bg1);
+    letter-spacing: 10px;
+}
+
+.upmain {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_top,
+.content_bottom {
+    border-radius: 10px;
+    width: 600px;
+    height: auto;
+    padding: 30px;
+}
+
+/* ----------프로필 회원정보 : 상단 ----------*/
+.content_top{
+    background-color: var(--color-font3);
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+}
+.content_top .UI_pic{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.content_top .UI_pic img{
+    background-color: gold;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.UI_Title{
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+    font-size: 20px;
+    color: var(--color-font1);
+    line-height: 1.8;
+    margin-left: 10px;
+}
+
+#UI_nickname, #UI_email, #UI_tel{
+    color: gray;
+    padding-top: 5px;
+    margin-left: 20px;
+}
+
+/* ---------- 회원정보수정(하단) ---------- */
+.bottom_title{
+    margin: 70px 0 20px;
+    font-size: 20px;
+}
+.bottom_title h2{
+    color: grey;
+    letter-spacing: 10px;
+}
+
+.content_bottom {
+    border: 1px solid var(--color-font3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.value.update_wrap{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.value.update_wrap form{
+    display: flex;
+    flex-direction: row;
+}
+.update_form_title {
+    background-color: var(--color-bg2);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    height: 20px;
+    margin-right: 20px;
+    padding: 5px 0;
+}
+.update_form_title2 {
+    background-color: var(--color-bg2);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    height: 20px;
+    margin-right: 20px;
+    padding: 5px 0;
+    letter-spacing: -1px;
+}
+
+.inner,
+.upload-name {
+    background-color: transparent;
+    border: 1px solid var(--color-font3);
+    width: 300px;
+    height: 20px;
+    padding: 3px 0;
+}
+
+.button.colorbutton{
+    background-color: transparent;
+}
+
+.btnUpNick, .btnUpPhone, .btnUpPswd, .btnUpDel, .btnUpPic{
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid var(--color-bg2);
+    color: var(--color-bg2);
+    text-align: center;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.btnUpNick:hover, .btnUpPhone:hover, .btnUpPswd:hover, .btnUpDel:hover, .btnUpPic:hover{
+    background-color: var(--color-bg2);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnUpPic{
+    position: relative;
+    left: 10px;
+}
+
+.nickname_form, .inner{
+    width: 290px;
+    padding: 3px 5px;
+}
+.attachedFile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    width: 290px;
+    padding: 0 5px;
+}
+
+/* ---------- 회원탈퇴 ---------- */
+.content_finish{
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+.content_finish .cus_delete{
+    color: var(--color-font2);
+    cursor: pointer;
+}

@@ -57,13 +57,13 @@ async function displayPosts(posts) {
                       <div class="info_top_p">
                           <div class="info_top">
                               <div class="job">
-                               <span class="ReqPostCate">분야</span>  ${post.category}
+                               분야 : ${post.category}
                               </div>
                               <div class="local">
-                               <span class="ReqPostCate">지역</span>  ${post.area}
+                               지역 : ${post.area}
                               </div>
                               <div class="date">
-                               <span class="ReqPostCate">희망날짜</span>  ${post.hope_date}
+                               희망날짜 : ${post.hope_date}
                               </div>
                           </div>
                       </div>

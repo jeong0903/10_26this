@@ -5,18 +5,20 @@
             color: #2A2F57;
         }
 
-        /* 컬러 */
-        :root {
-            --color-font1: #2A2F57;
-            /* 글자색 */
-            --color-font2: #381B1B;
-            /* 카카오톡 글자색 */
+    /* 컬러 */
+    :root {
+        --color-font1: #003;
+        /* 글자색 */
+        --color-font2: #bbb;
+        /* 서브 글자색 */
+        --color-font3: #f0f0f0;
+        /* 밝은 회색 */
 
-            --color-bg1: #00B0FA;
-            /* 배경색 */
-            --color-bg2: #0056b3;
-            /* 어두운 배경색 */
-        }
+        --color-bg1: #00B0FA;
+        /* 밝은 배경색 */
+        --color-bg2: #039;
+        /* 어두운 배경색 */
+    }
 
         .main {
             margin:100px 0 50px;
@@ -31,7 +33,7 @@
             padding: 20px;
             width:400px;
             text-align: center;
-            border-bottom:1px solid #00B0FA;
+            border-bottom:1px solid var(--color-bg2)
         }
 
         .main .forms {
@@ -103,7 +105,7 @@
             margin: 10px 0 10px 0;
             text-align: center;
             font-size: larger;
-            background-color: #00B0FA;;
+            background-color: var(--color-bg2);
             color: #fff;
             border: none;
             display: flex;
@@ -113,7 +115,9 @@
             cursor: pointer;
         }
         .main .sign_btn_submit:hover{
-          background-color: var(--color-bg2);
+          background-color: #fff;
+          color: var(--color-bg2);
+          border: 1px solid var(--color-bg2);
         }
         .checkbox_field{
           display: flex;

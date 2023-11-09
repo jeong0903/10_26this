@@ -1,4 +1,17 @@
+/* 컬러 */
+:root {
+    --color-font1: #003;
+    /* 글자색 */
+    --color-font2: #bbb;
+    /* 서브 글자색 */
+    --color-font3: #f0f0f0;
+    /* 밝은 회색 */
 
+    --color-bg1: #00B0FA;
+    /* 밝은 배경색 */
+    --color-bg2: #039;
+    /* 어두운 배경색 */
+}
 a{
     text-decoration: none;
 }
@@ -7,7 +20,6 @@ a:hover{
 }
 body{
     margin:0;
-    margin-top:100px;
 }
 li{
     list-style:none;
@@ -21,16 +33,19 @@ li{
     display:flex;
     justify-content:center;
     align-items: center;
+    height: 100px;
+    margin-top: 100px;
 }
 
 #h3_title{
     display:flex;
     justify-content:right;
-    padding: 80px 50px 20px 0;
-    border-bottom: 1px solid #00B0FA;
-    font-size: 2.2rem;
+    padding: 50px 50px 40px 0;
+    border-bottom: 1px solid var(--color-bg1);
+    font-size: 35px;
     width: 954px;
-    color: #0056b3;
+    color: var(--color-bg2);
+    margin-top:100px;
 }
 
 /* 페이지 메인 구간 */
@@ -60,7 +75,7 @@ li{
 .subTitle_btn2,
 .subTitle_btn3,
 .subTitle_btn4{
-    background-color: #0056b3;
+    background-color: var(--color-bg2);
     color:#fff;
     width:100px;
     height:160px;
@@ -96,10 +111,10 @@ li{
 width:90px;
     height: auto;
     text-align: right;
-    border-right: 10px solid #0056b3;
+    border-right: 10px solid var(--color-bg2);
     padding:0 10px;
     margin-right:30px;
-    color:#0056b3;
+    color:var(--color-bg2);
     font-size: 25px;
     line-height: 1.3;
 }

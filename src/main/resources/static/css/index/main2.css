@@ -3,10 +3,23 @@
     /* outline: 1px solid gray; */
     margin: 0;
     padding: 0;
-    color: #2A2F57;
+    color: var(--color-font1);
     font-family: 'GowunBatang-Regular';
 }
+/* 컬러 */
+:root {
+    --color-font1: #003;
+    /* 글자색 */
+    --color-font2: #bbb;
+    /* 서브 글자색 */
+    --color-font3: #f0f0f0;
+    /* 밝은 회색 */
 
+    --color-bg1: #00B0FA;
+    /* 밝은 배경색 */
+    --color-bg2: #039;
+    /* 어두운 배경색 */
+}
 .container__main2{
     display: grid;
     grid-template-columns: 1fr 1024px 1fr;
@@ -55,7 +68,7 @@
 }
 
 .main2 .section__main2 .item__main2:hover{
-    border: 1px solid #00B0FA;
+    border: 1px solid var(--color-bg2);
     background-color: #f2f2f2;    
     cursor: pointer;
 }

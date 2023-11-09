@@ -32,7 +32,10 @@
         })
     }
     const $file = document.getElementById("file");
+const $button = document.querySelector(".btnFile");    //
+
     $file.addEventListener('change',e=>{
         const fileName = $file.value;
         document.querySelector(".upload-name").value = fileName;
+        $button.style.backgroundColor = '#039';
     });

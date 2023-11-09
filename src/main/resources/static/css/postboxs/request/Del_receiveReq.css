@@ -10,6 +10,7 @@
     "left main .";
     grid-template-columns: 1fr 1024px 1fr;
     margin-bottom: 100px;
+    background-color: gold;
 }
 
 /* 보낸요청 / 받은 요청 */

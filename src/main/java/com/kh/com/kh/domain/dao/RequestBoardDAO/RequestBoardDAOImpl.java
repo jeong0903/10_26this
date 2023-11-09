@@ -26,7 +26,7 @@ public class RequestBoardDAOImpl implements RequestBoardDAO{
     String sql =
         ("select board_id,member_id,category,area,hope_date,hope_text from requestBoard ");
     String sql2 =
-        ("select r1.member_id,nickname from requestBoard r1, member m1 where r1.member_id = m1.member_id ");
+        ("select r1.member_id, m1.nickname from requestBoard r1, member m1 where r1.member_id = m1.member_id ");
 
     List<WorkGiveAll> query = template.query(sql, BeanPropertyRowMapper.newInstance(WorkGiveAll.class));
     List<WorkGiveNick> queryNick = template.query(sql2, BeanPropertyRowMapper.newInstance(WorkGiveNick.class));
